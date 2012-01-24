@@ -1,6 +1,7 @@
 Ext.regApplication({
     name : 'app', 
     defaultTarget : 'viewport', 
+    defaultUrl : 'index/index',
     useHistory : true, 
     launch : function () {
         this.launched = true;
@@ -14,6 +15,5 @@ Ext.regApplication({
             map.connect(":controller/:action/:id");
             map.connect(":controller/:action");
         });
-        this.viewport.setActiveItem(new app.views.HelloWorld);
     }
 });

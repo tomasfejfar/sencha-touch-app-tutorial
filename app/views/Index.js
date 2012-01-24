@@ -1,4 +1,4 @@
-app.views.HelloWorld = Ext.extend(Ext.Panel, {
+app.views.Index = Ext.extend(Ext.Panel, {
     initComponent : function() {
         Ext.apply(this, {
             dockedItems : [ {
@@ -21,6 +21,6 @@ app.views.HelloWorld = Ext.extend(Ext.Panel, {
                 html : 'Hello World!'
             } ]
         });
-        app.views.HelloWorld.superclass.initComponent.apply(this, arguments);
+        app.views.Index.superclass.initComponent.apply(this, arguments);
     }
 });
