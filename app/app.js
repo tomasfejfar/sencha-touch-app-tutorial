@@ -14,6 +14,6 @@ Ext.regApplication({
             map.connect(":controller/:action/:id");
             map.connect(":controller/:action");
         });
-        alert('up and running');
+        this.viewport.setActiveItem(new app.views.HelloWorld);
     }
 });
