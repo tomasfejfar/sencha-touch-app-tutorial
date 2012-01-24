@@ -12,7 +12,8 @@ app.views.Index = Ext.extend(Ext.Panel, {
                     handler : function() {
                         Ext.dispatch({
                             controller : 'index',
-                            action : 'list'
+                            action : 'list',
+                            historyUrl : 'index/list'
                         });
                     }
                 } ]

@@ -12,6 +12,7 @@ app.views.List = Ext.extend(Ext.Panel, {
                         Ext.dispatch({
                             controller : 'index',
                             action : 'index',
+                            historyUrl : 'index/index',
                             animation : {
                                 type : 'slide'
                             }
