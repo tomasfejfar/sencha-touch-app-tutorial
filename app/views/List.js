@@ -22,11 +22,13 @@ app.views.List = Ext.extend(Ext.Panel, {
                     xtype : 'button',
                     text : 'Nah...'
                 } ]
-            } ],
-            items : [ {
-                html : 'List!'
             } ]
         });
+        this.list = new Ext.List({
+            itemTpl : '<strong>{who}</strong>: {what}',
+            store : app.stores.tweets
+        });
+        this.items = [this.list];
         app.views.List.superclass.initComponent.apply(this, arguments);
     }
 });
