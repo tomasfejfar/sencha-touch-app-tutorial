@@ -4,14 +4,17 @@ Ext.regController('index', {
         this.panel.button.on('tap', function () {
             alert('...can\'t touch this!');
         });
-        this.application.viewport.setActiveItem(this.panel);
+        this.application.viewport.setActiveItem(this.panel, options.animation);
     }, 
     list : function(options) {
         this.panel = new app.views.List();
         this.panel.list.on('itemtap', function (list, id, el, event) {
             alert('Not nearly 9000...the id is nearly ' + id);
         });
-        this.application.viewport.setActiveItem(this.panel);
+        this.application.viewport.setActiveItem(this.panel, {
+            type : 'slide', 
+            direction : 'up'
+        });
     }
 });
  

@@ -10,8 +10,11 @@ app.views.List = Ext.extend(Ext.Panel, {
                     text : 'Yay!', 
                     handler : function() {
                         Ext.dispatch({
-                            controller : 'index', 
-                            action : 'index'
+                            controller : 'index',
+                            action : 'index',
+                            animation : {
+                                type : 'slide'
+                            }
                         });
                     }
                 } ]
