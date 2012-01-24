@@ -7,7 +7,13 @@ app.views.Index = Ext.extend(Ext.Panel, {
                 title : 'Hello World',
                 items : [ {
                     xtype : 'button',
-                    text : 'Yay!'
+                    text : 'Yay!', 
+                    handler : function() {
+                        Ext.dispatch({
+                            controller : 'index', 
+                            action : 'list'
+                        });
+                    }
                 } ]
             }, {
                 xtype : 'toolbar',
