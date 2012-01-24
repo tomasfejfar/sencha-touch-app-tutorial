@@ -1,16 +1,17 @@
 app.views.Index = Ext.extend(Ext.Panel, {
     initComponent : function() {
         Ext.apply(this, {
+            layout : 'fit',
             dockedItems : [ {
                 xtype : 'toolbar',
                 dock : 'top',
-                title : 'Hello World',
+                title : 'McHammer',
                 items : [ {
                     xtype : 'button',
-                    text : 'Yay!', 
+                    text : 'Yay!',
                     handler : function() {
                         Ext.dispatch({
-                            controller : 'index', 
+                            controller : 'index',
                             action : 'list'
                         });
                     }
@@ -22,11 +23,18 @@ app.views.Index = Ext.extend(Ext.Panel, {
                     xtype : 'button',
                     text : 'Nah...'
                 } ]
-            } ],
-            items : [ {
-                html : 'Hello World!'
             } ]
         });
+        this.button = new Ext.Button({
+            text : 'You...',
+            itemId : 'hammerButton'
+        });
+        this.panel = new Ext.Panel({
+            layout : 'vbox',
+            itemId : 'hammerPanel', 
+            items : [this.button]
+        });
+        this.items = [ this.panel ];
         app.views.Index.superclass.initComponent.apply(this, arguments);
     }
 });
