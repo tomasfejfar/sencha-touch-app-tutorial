@@ -25,7 +25,13 @@ app.views.List = Ext.extend(Ext.Panel, {
                     xtype : 'button',
                     text : 'Nah...'
                 } ]
-            } ]
+            } ],
+            listeners : {
+                deactivate : function (component) {
+                    component.destroy();
+                    console.log('All your base are belong to us!');
+                }
+            }
         });
         this.list = new Ext.List({
             itemTpl : '<strong>{who}</strong>: {what}',

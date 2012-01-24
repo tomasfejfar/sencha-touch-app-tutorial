@@ -23,7 +23,13 @@ app.views.Index = Ext.extend(Ext.Panel, {
                     xtype : 'button',
                     text : 'Nah...'
                 } ]
-            } ]
+            } ],
+            listeners : {
+                deactivate : function (component) {
+                    component.destroy();
+                    console.log('@anonops: #opPayback stopped');
+                }
+            }
         });
         this.button = new Ext.Button({
             text : 'You...',
